@@ -1,0 +1,8 @@
+[package]
+name = "ronion"
+version = "0.1.0"
+authors = ["gpestana <g6pestana@gmail.com>"]
+
+[dependencies]
+rust-crypto = "^0.2"
+
