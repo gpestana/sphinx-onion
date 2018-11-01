@@ -1,8 +1,12 @@
 mod crypto;
+extern crate hmac;
+extern crate sha2;
 
-use crypto::keys;
+use crypto::keys::Keys;
 
 fn main() {
-    keys::generate()
+    let s = String::from("secret");
+    let ks = Keys::new(s);
+    println!("{:?}\n{:?}", ks.rho, ks.mu);
 }
 

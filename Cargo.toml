@@ -5,4 +5,5 @@ authors = ["gpestana <g6pestana@gmail.com>"]
 
 [dependencies]
 rust-crypto = "^0.2"
-
+hmac = "0.7.0"
+sha2 = "0.8.0"
