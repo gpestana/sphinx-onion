@@ -34,16 +34,16 @@ package are:
 
 1) Choose `v` onion relays and get their public keys `x_0`, ... `x_i`;
 
-2) Compute random pseudonym `α_i;
+2) Compute random pseudonym `α_i`;
 
-3) Computer session key `s\_i`, where `s\_i = α\_i^x\_i`;
+3) Computer session key `s_i`, where `s_i = α_i^x_i`;
 
 4) wrap message in multiple layers of encryption usgin PRG `ρ` to generate
-values `β\_i`
+values `β_i`
 
-5) calculate HMAC `γ\_i` at each relay node;
+5) calculate HMAC `γ_i` at each relay node;
 
-The onion packet header is represent by the tuple `{α\_i, β\_i, γ\_i`}.
+The onion packet header is represent by the tuple `{α_i, β_i, γ_i`}.
 
 ### Packet consumption
 
@@ -53,13 +53,13 @@ forward the packet:
 
 1) Extract session key with its private key;
 
-2) Extract the presudoanonym `α\_i`;
+2) Extract the presudoanonym `α_i`;
 
-3) Use `β\_i` and `α\_i` to verify the received HMAC `γ\_i`;
+3) Use `β_i` and `α_i` to verify the received HMAC `γ_i`;
 
-4) Decrypt layer of encryption from `β\_i`;
+4) Decrypt layer of encryption from `β_i`;
 
-5) Compute pseudonym `α\_i` for the next node relay;
+5) Compute pseudonym `α_i` for the next node relay; 
 
 6) extract routing information and forward the packet and header to the next
 onion relay.
@@ -82,7 +82,6 @@ The key types are:
   which is `XOR`ed to the `hops_data`. This key is generated using hop's shared 
 secret;
 - *mu*=`0x6d75`: used for HMCA generation;
-- *um*=`0x756d`: used for error reporting. `//needed?`
 
 ## Packet obfuscation and pseudo-random byte stream
 
