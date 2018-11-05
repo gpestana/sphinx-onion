@@ -1,4 +1,4 @@
-# ronion specs
+# Specs and implementation details
 
 ## Overview of onion routing circuit message format
 
